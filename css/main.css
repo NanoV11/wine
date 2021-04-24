@@ -1,0 +1,450 @@
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Glaho Bold';
+    src: url('../fonts/bpg-glaho-bold-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/bpg-glaho-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/bpg-glaho-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/bpg-glaho-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/bpg-glaho-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/bpg-glaho-bold-webfont.svg#bpg_glahobold') format('svg'); /* Legacy iOS */
+}
+
+
+body{
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5; 
+    max-width: 1600px;
+    width: 100%;
+}
+.fullScreenVideo {
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullScreenVideo video{
+    min-width: 100%;
+    min-height: 100%;
+}
+.label #button, .label #cancel {
+    color: white;
+}
+.header-content{
+    z-index: 9999;
+    background: rgba(0,0,0,0.7);
+    height: 50px;
+    position: absolute;
+    max-width: 1500px;
+    width: 100%;
+}
+
+
+.header-content ul {
+    float: right;
+    margin: 20px;
+    margin-top: 15px;
+    margin-right: 50px;
+    font-size: 15px;
+    
+}
+.header-content ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.header-content ul li a{
+    color: grey;
+}
+
+.logo {
+    position:absolute;
+    left: 4%;
+    font-size: 20px;
+    color: white;
+}
+
+.logo::first-letter{
+    font-size: 30px;
+    color: rgb(218, 59, 59);
+}
+
+.content{
+    z-index: 2;
+    position:absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 35px;
+    background: #161616;
+    animation: slide-out-container 4s 2.8s;
+    animation-fill-mode: forwards;
+}
+
+.text-wrapper{
+    color: white;
+    position: absolute;
+}
+
+.text-2,.text-4,.text-5,.text-8,.text-9,.text-11{
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px rgb(214, 13, 13);
+}
+.text-1 {
+    animation: blink 0.8s linear 0.9s ,blink 0.8s linear 2s;
+    opacity: 0;
+}
+.text-2 {
+    animation: blink 0.8s linear 0.8s , blink 0.8s linear 2.1s;
+    opacity: 0;
+}
+.text-3 {
+    animation: blink 0.8s linear 0.7s , blink 0.8s linear 2.2s;
+    opacity: 0;
+}
+.text-4 {
+    animation: blink 0.8s linear 0.6s , blink 0.8s linear 2.3s;
+    opacity: 0;
+}
+.text-5 {
+    animation: blink 0.8s linear 0.5s , blink 0.8s linear 2.4s,slide-out 1s linear 3.2s ;
+    opacity: 0;
+}
+.text-6 {
+    animation: blink 0.8s linear 0.4s , blink 0.8s linear 2.5s;
+    opacity: 0;
+}
+.text-7 {
+    animation: blink 0.8s linear 0.5s , blink 0.8s linear 2.4s;
+    opacity: 0;
+}
+.text-8 {
+    animation: blink 0.8s linear 0.6s , blink 0.8s linear 2.3s;
+    opacity: 0;
+}
+.text-9 {
+    animation: blink 0.8s linear 0.7s , blink 0.8s linear 2.2s;
+    opacity: 0;
+}
+.text-10 {
+    animation: blink 0.8s linear 0.8s , blink 0.8s linear 2.1s;
+    opacity: 0;
+}
+.text-11 {
+    animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+    opacity: 0;
+}
+@keyframes blink{
+    0% {
+        opacity: 0;
+    }
+    1%{
+        opacity: 100%;
+    }
+    99%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out{
+    0% {
+        opacity: 0;
+        
+    }
+    1%{
+        opacity: 100%;
+        /* font-size: 100px; */
+    }
+    18%{
+        opacity: 100%;
+        /* font-size: 100px; */
+    }
+    20%{
+        opacity: 0;
+        /* font-size: 100px; */
+    }
+    38%{
+        opacity: 0;
+        /* font-size: 100px; */
+    }
+    40%{
+        opacity: 100%;
+        /* font-size: 100px; */
+    }
+    58%{
+        opacity: 100%;
+        /* font-size: 100px; */
+    }
+    60%{
+        opacity: 0;
+        /* font-size: 100px; */
+    }
+    78%{
+        opacity: 0;
+        /* font-size: 100px; */
+    }
+    80%{
+        opacity: 100%;
+        /* font-size: 100px; */
+    }
+    100%{
+        opacity: 100%;
+        /* font-size: 100px; */
+    }
+}
+
+.container {
+    width: 1280px; 
+    margin:  55px auto 0; 
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-text {
+    font-family: 'Glaho Bold';
+    font-size: 25px;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration:overline;
+}
+.container .box {
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+
+}
+.container .box .imgBox{
+    position: relative;
+    overflow: hidden;
+
+}
+.container .box .imgBox img {
+    max-width: 100%;
+    transition: all 2s;
+    
+}
+.container .box:hover .imgBox img{
+    transform: scale(1.1);
+}
+.container .box .details {
+    position: absolute;
+    top: 40%;
+    left: 15px;
+    background: rgba(124, 17, 17, 0.26);
+    transform: scaleY(0);
+    transition: all 0.5s;
+
+}
+.container .box:hover .details{
+    transform: scaleY(1);
+}
+.container .box .details .text{  
+    font-family: 'Glaho Bold';
+    text-align: center;
+    color: #ffffffaf;
+}
+
+.wine{
+    background: rgba(0, 0, 0, 0.952);
+    display: flex;
+    justify-content: space-between;
+}
+.wine img {
+    width: 800px;
+}
+
+.wine p{
+    width: 400px;
+    font-family: 'Glaho Bold';
+    color: grey;
+    margin-top: 10%;
+    margin-right: 10%;
+}
+
+.form-box{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin:9% auto 5% auto;
+    background:#1d1c1cde;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-box {
+    width: 250px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 15px 9px  #ff61241f;
+    border-radius: 25px;
+}
+
+.btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 135px;
+    height: 100%;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 25px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+.input {
+    top:180px;
+    position: absolute;
+     width: 280px;
+     transition: all 0.5s;
+}
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 15px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999999;
+    outline: none;
+    background: transparent;
+}
+
+.submit {
+    width: 60%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 30px 70px;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.checkbox {
+    margin: 30px 10px 0;
+
+}
+.input span{
+    color: #777777;
+    font-size: 12px;
+    position: absolute;
+    bottom:100px;
+    
+}
+#login {
+    left: 50px;
+}
+#register {
+    left: 450px;
+}
+
+
+footer{
+    background: #111111;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    color: #ffffffaf;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0 5px 0;
+}
+
+.socials li {
+    margin: 0 12px;
+}
+.socials a{
+    color: #ffffff;
+}
+.socials a i{
+    font-size: 25px;
+    transition: all 0.5s ease;
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    margin-top: 15px;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 15px;
+}
+
+.list{
+    color: #b32323af;
+    text-align: center;
+    list-style: none;
+    font-size: 15px;
+    
+}
+.hamburger {
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+.hamburger label{
+   
+    color: white;
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    display: none;
+}
+.hamburger input{
+    display: none;
+}
+
